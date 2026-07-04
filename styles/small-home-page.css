@@ -136,14 +136,14 @@ h1 {
 }
 
 /* ---- WEB BUTTONS ---- */
-.filter-buttons {
+.buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
     padding: 15px 0;
 }
 
-.filter-buttons button {
+.buttons button {
     background-color: var(--accent-color);
     color: var(--secondary-color);
     border: none;
@@ -153,7 +153,7 @@ h1 {
     font-weight: bold;
 }
 
-.filter-buttons button.active-btn {
+.buttons button.active-btn {
     background-color: var(--tertiary-color);
 }
 
@@ -163,11 +163,24 @@ h1 {
     margin-bottom: 20px;
 }
 
-.course-grid {
+.course-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 15px;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+
+.course-card {
+    display: grid;
+    gap: 5px;
+    padding: 1rem;
+    border-left: 5px solid var(--tertiary-color);
+}
+
+.course-card.completed {
+    border-radius: 20px;
+    color: var(--color);
 }
 
 /* ---- FOOTER ---- */
