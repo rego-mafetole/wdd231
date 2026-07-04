@@ -1,4 +1,4 @@
-@media only screen and (min-width: 38rem) {
+@media (min-width: 640px) {
 
     header,
     main,
@@ -29,4 +29,12 @@
         border: none;
     }
 
+    .profile-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .courses-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
 }

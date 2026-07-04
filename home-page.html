@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <meta name="description" content="Chamber of Commerce Home Page">
+    <meta name="description" content="WDD 231 - Web Development I - Chamber of Commerce Home Page">
     <meta name="author" content="Regomoditswe Elizabeth Mafetole">
 
     <link rel="stylesheet" href="styles/normalize.css">
@@ -13,16 +13,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
-        rel="stylesheet">
-
     <script src="scripts/home-page.js" defer></script>
 </head>
 
@@ -42,19 +34,36 @@
     </ul>
 </nav>
 
-   <main>
-    <h1>Home</h1>
-    <section>
+<main>
+<h1>Home</h1>
+
+    <div class="profile-grid">
+    <section class="card">
         <h2>About Me</h2>
+        <p></p>
     </section>
 
-    <section>
+    <section class="card">
         <h2>Student Photo</h2>
+        <div class="photo">
+        <img src="" alt="Image of the Student">
+        </div>
     </section>
 
-    <section>
+    <section class="card courses-section">
         <h2>Web Certificate Courses</h2>
+        <div class="filter-buttons">
+            <button id="btn-all" class="active-btn">All Courses</button>
+            <button id="btn-wdd">WDD Courses</button>
+            <button id="btn-cse">CSE Courses</button>
+        </div>
+
+        <p class="course-count">The total number of course listed below is <span id="total-count">0</span></p>
+
+        <div id="courses-container" class="courses-grid"></div>
     </section>
+
+    </div>
    </main>
 
    <footer>
@@ -68,7 +77,8 @@
         <a href="https://www.instagram.com/_rego.moditswe?igsh=MTQ4b2JIYzF4d3YxNA%3D%&u" target="_blank"><img
                 src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
     </div>
-    <span id="currentyear"></span>
+    <p>&copy; <span id="current-year"></span> 🌸 Regomoditswe 🌸 Pretoria, South Africa</p>
+    <p id="lastModified"></p>
    </footer>
 </body>
 
