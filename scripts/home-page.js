@@ -3,7 +3,7 @@
 const navButton = document.querySelector('#ham-btn');
 const navLinks = document.querySelector('#nav-bar');
 
-// Toggle the show class on and off
+// TOGGLE THE SHOW ON AND OFF
 
 navButton.addEventListener('click', () => {
     navButton.classList.toggle('show');
@@ -90,8 +90,7 @@ const courses = [
         ],
         completed: false
     }
-]
-// DECLARE DOM TARGET
+];
 
 // Declare DOM target variables globally
 let courseContainer;
@@ -176,7 +175,6 @@ function displayCourses(filter = 'all') {
     const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
     totalCreditsDisplay.textContent = totalCredits;
 }
-
 
 
 

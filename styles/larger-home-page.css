@@ -1,10 +1,10 @@
-@media (min-width: 38rem) {
+@media only screen and (min-width: 38rem) {
 
     header,
     main,
     nav,
     footer {
-        max-width: 900px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
@@ -29,12 +29,22 @@
         border: none;
     }
 
-    .profile-grid {
+    .profile {
         display: grid;
         grid-template-columns: 2fr 1fr;
+        justify-content: center;
+        column-gap: 10px;
     }
 
-    .courses-grid {
+    .courses {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    #card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        column-gap: 10px;
+        min-height: 400px;
     }
 }

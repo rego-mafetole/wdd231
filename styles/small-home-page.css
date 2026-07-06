@@ -1,21 +1,28 @@
-/* ---- COLOUR SCHEME ---- */
+/* ---- GLOOBAL STYLES ---- */
 
 :root {
     --body-font: 'Roboto', sans-serif;
-        --primary-color: #8B4513; /*Header, footer, and section divider*/
-        --secondary-color: white; /* text*/
-        --tertiary-color: #D2691E; /* hover, borders and image overlays*/
-        --background-color: #F5F2EB; /*Main page body */
-        --accent-color: #5C3E2B; /*Buttons*/
-        --color: #2B1E16;
-        --font-family: Verdana, Geneva, Tahoma, sans-serif;/*Site name*/
+    --primary-color: #8B4513; /*Header, footer, and section divider*/
+    --secondary-color: white; /* text*/
+    --tertiary-color: #D2691E; /* hover, borders and image overlays*/
+    --background-color: #F5F2EB; /*Main page body */
+    --accent-color: #5C3E2B; /*Buttons*/
+    --color: #2B1E16;
+    --font-family: Verdana, Geneva, Tahoma, sans-serif;/*Site name*/
+    --box-shadow: 0 0 15px #808080;
+    --border-bottom: #ddd;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navigation, footer {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+    font-family: var(--body-font);
 }
 
 /* ---- Header ---- */
@@ -28,7 +35,7 @@ header {
     border-bottom: solid 1px #ddd;
     column-gap: 8px;
     padding-bottom: 5px;
-    font-family: var();
+    font-family: var(--font-family);
 }
 
 header img {
@@ -38,8 +45,9 @@ header img {
 }
 
 header span {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: black;
+    font-weight: bold;
 }
 
 /* ---- HAMBUGER ---- */
@@ -47,7 +55,7 @@ header span {
 .hamburger {
     background: none;
     border: none;
-    color: black;
+    color: var(--color);
     cursor: pointer;
 }
 
@@ -79,17 +87,19 @@ header span {
 .navigation a {
     display: block;
     padding: .8rem 10px;
-    color: #3D405B;
+    text-align: center;
+    color: var(--secondary-color);
     text-decoration: none;
-    border-bottom: solid 1px #ddd;
+    border-bottom: solid 1px var(--border-bottom);
 }
 
 .navigation li.current {
-    background-color: #eee;
+    text-decoration: underline;
 }
 
 .navigation a:hover {
-    background-color: #ddd;
+    background-color: var(--border-bottom);
+    color: var(--primary-color);
 }
 
 h1 {
@@ -97,98 +107,110 @@ h1 {
     font-family: var(--body-font);
 }
 
-/* ---- MAIN ---- */
+/* ---- BODY ---- */
 
-.profile-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    margin-bottom: 20px;
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    color: var(--color);
 }
 
-.profile-grid section {
-    background-color: var(--background-color);
-    
+section {
+    padding: 15px;
+    margin: 8px;
 }
 
-.card {
-    background-color: var(--background-color);
+h2, p, #course-list, #course-list a, figure {
+    padding: 5px;
+    margin: 8px 0;
+}
+
+section,
+.profile,
+h2,
+#course-list a,
+figure {
+    box-shadow: var(--box-shadow);
     border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 20px;
 }
 
-.card h2 {
-    background-color: var(--tertiary-color);
-    color: var(--secondary-color);
-    margin: 0;
-    padding: 12px;
+section,
+.profile,
+figure {
+    background-color: var(--background-color);
+}
+
+/* ---- LAYOUT ---- */
+
+h2 {
+    align-items: center;
     text-align: center;
-    font-size: 1rem;
-}
-
-.photo {
-    justify-content: center;
-}
-
-.card p, .card .photo {
-    padding: 1.5rem;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
 /* ---- WEB BUTTONS ---- */
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 15px 0;
-}
 
-.buttons button {
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.buttons button.active-btn {
-    background-color: var(--tertiary-color);
-}
-
-.course-count {
+.course p {
+    align-content: center;
     text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
 }
 
-.course-container {
+.course ul li p {
+    text-align: left;
+}
+
+#course-list {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-bottom: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    column-gap: 8px;
+    list-style-type: none;
 }
 
-
-.course-card {
+#course-list a {
     display: grid;
-    gap: 5px;
-    padding: 1rem;
-    border-left: 5px solid var(--tertiary-color);
-}
-
-.course-card.completed {
-    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    border: none;
+    text-decoration: none;
+    background-color: var(--background-color);
+    font-family: var(--body-font);
     color: var(--color);
+    font-size: 1.25em;
+}
+
+#course-list a:hover {
+    background-color: var(--background-color);
+    color: var(--color);
+}
+
+#course-list li.active {
+    text-decoration: underline;
+}
+
+.completed-course h2::before {
+    content: " \2714";
+    color: var(--secondary-color);
+    margin-right: 15px;
+}
+
+.profile {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 3/2;
 }
 
 /* ---- FOOTER ---- */
 
 footer {
-    background-color: #eee;
     padding: 1rem 10px;
     text-align: center;
+    
 }
 
 .social {
@@ -214,3 +236,4 @@ footer {
 .social a:hover {
     background-color: #ddd;
 }
+
