@@ -234,6 +234,6 @@ footer {
 }
 
 .social a:hover {
-    background-color: #ddd;
+    background-color: var(--border-bottom);
 }
 
