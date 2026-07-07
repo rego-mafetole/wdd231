@@ -10,6 +10,14 @@ navButton.addEventListener('click', () => {
     navLinks.classList.toggle('show');
 });
 
+// ARRAY CONSTANTS
+
+const allLink = document.querySelector('#all');
+const wddLink = document.querySelector('#wdd');
+const cseLink = document.querySelector('#cse');
+const numCredits = document.querySelector('#credits');
+const card = document.querySelector('#courses-container');
+
 // COURSE LIST ARRAY
 
 const courses = [
@@ -90,9 +98,47 @@ const courses = [
         ],
         completed: false
     }
-];
+]
 
+wddLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const wdd = courses.filter(course => course.subject === 'WDD')
+    displayCourses(wdd)
+});
+cseLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const cse = courses.filter(course => course.subject === 'CSE')
+    displayCourses(cse);
+});
+allLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const all = courses
+    displayCourses(all);
+});
 
+function displayCourses(filteredCourses) {
+    const mainElement = document.querySelector("#courses-container");
+    mainElement.innerHTML = "";
+    const totalCredits = filteredCourses.reduce((accumulator, course) => accumulator + course.credits, 0);
+    document.getElementById("totalCredits").innerHTML = totalCredits;
+    filteredCourses.forEach(course => {
+        let card = document.createElement("figure");
+        card.innerHTML = `
+            <h2>${course.subject} ${course.number}:<br>${course.title}</h2>
+            <p>Credits: ${course.credits}</p>
+            <p>Certificate: ${course.certificate}</p>
+            <p>Description: ${course.description}</p>
+            <p>Technology: ${course.technology}</p>
+            `;
+        mainElement.appendChild(card);
+        if (course.completed) {
+            card.classList.add("completed-course");
+        }
+    });
+
+}
+
+displayCourses(courses);
 
 // DYNAMIC FOOTER DATES
 

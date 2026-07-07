@@ -126,6 +126,7 @@ h2, p, #course-list, #course-list a, figure {
     margin: 8px 0;
 }
 
+
 section,
 .profile,
 h2,
@@ -151,6 +152,12 @@ h2 {
 }
 
 /* ---- WEB BUTTONS ---- */
+
+.course-count {
+    font-weight: bold;
+    font-family: var(--font-family);
+    text-align: center;
+}
 
 .course p {
     align-content: center;
@@ -197,7 +204,7 @@ h2 {
     margin-right: 15px;
 }
 
-.profile {
+.profile-grid {
     display: block;
     width: 100%;
     max-width: 100%;
@@ -210,7 +217,9 @@ h2 {
 footer {
     padding: 1rem 10px;
     text-align: center;
-    
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
 }
 
 .social {

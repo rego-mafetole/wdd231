@@ -22,7 +22,7 @@
 <body>
 
    <header>
-    <img src="images/logo.svg" alt="Site Logo" width="800px" height="800px">
+    <img src="images/logo.svg" alt="Site Logo" width="800px" height="800px" loading="lazy">
     <span>Regomoditswe Elizabeth Mafetole</span>
     <button id="ham-btn" class="hamburger"></button>
    </header> 
@@ -42,13 +42,14 @@
     <section class="about-me">
         <h2>About Me</h2>
         <p>Hey there! I'm Regomoditswe Elizabeth Mafetole. I'm currently persuing a degree in Software Development through Brigham Young University-Idaho (BYU-Idaho).
-             I'm studying remotely from Gauteng, South Africa. 
+             I'm studying remotely from Gauteng, South Africa. I enjoy building code and solving real problem with Javascript.
+             When I'm not coding, I like exploring new tech, going out, listening to music and spending time with my family.
         </p>
     </section>
 
     <section>
         <h2>Student Photo</h2>
-        <img class="photo" src="images/mypicture.webp" alt="Image of the Student" width="150" height="150">
+        <img class="photo" src="images/mypicture.webp" alt="Image of the Student" width="150" height="150" loading="lazy">
     </section>
     </div>
 
@@ -60,9 +61,9 @@
             <li><a href="#" id="cse">CSE Courses</a></li>
         </ul>
 
-        <p class="course-count">The total number of course listed below is <span id="total-count">0</span></p>
+        <p class="course-count">The total number of course listed below is <span id="totalCredits">0</span></p>
 
-        <div id="card-container">
+        <div id="courses-container">
             <figure class="completed-course">
                 <h2>CSE 110:<br>Introduction to Programming</h2>
                 <p>Credits: 2</p>
