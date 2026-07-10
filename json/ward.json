@@ -1,0 +1,28 @@
+{
+    "family_ame": "Smith",
+    "date_moved": "13 August 2024",
+    "number_of_members": 4,
+    "visited_by_Bishopric": "true",
+    "familyMembers": [
+        {
+            "name": "Jerry Smith",
+            "gender": "male",
+            "birthdate": "1994-12-17"
+        },
+        {
+            "name": "Mary Smith",
+            "gender": "female",
+            "birthdate": "1997-05-16"
+        },
+        {
+            "name": "Lila Smith",
+            "gender": "female",
+            "birthdate": "2020-09-15"
+        },
+        {
+            "name": "Luke Smith",
+            "gender":"male",
+            "birthdate": "2023-03-20"
+        }
+    ]
+}
