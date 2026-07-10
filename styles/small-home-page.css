@@ -205,11 +205,8 @@ h2 {
 }
 
 .profile-grid {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 3/2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 /* ---- FOOTER ---- */
