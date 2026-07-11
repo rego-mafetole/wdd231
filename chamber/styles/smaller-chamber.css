@@ -1,0 +1,134 @@
+/* ---- GLOBAL STYLES ---- */
+
+:root {
+    --primary-color: rgb(12, 77, 12); /*header, footer and section dividers*/
+    --secondary-color: #8B4513 ; /* hover, borders and image overlays*/
+    --background-color: #F5F2EB;
+    --accent: ;
+    --text-color: black;
+    --color: white;
+    --font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --body-font:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    --box-shadow: 0 0 15px #808080;
+    --border: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---- HEADER ---- */
+
+header {
+    display: grid;
+    background-color: var(--primary-color);
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px var(--border);
+    column-gap: 8px;
+    padding-bottom: 5px;
+    font-family: var(--font-family);
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: var(--color);
+    font-weight: bold;
+}
+
+/* ---- HAMBURGER ---- */
+
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.5rem;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/* ---- NAVIGATION ----*/
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    text-align: center;
+    color: var(--text-color);
+    font-family: var(--body-font);
+    text-decoration: none;
+    border-bottom: solid 1px var(--border);
+}
+
+.navigation li.current {
+    text-decoration: underline;
+}
+
+.navigation a:hover {
+    background-color: var(--border);
+    color: var(--primary-color);
+}
+
+/* ---- FOOTER ---- */
+
+footer {
+    padding: 1rem 10px;
+    text-align: center;
+    background-color: var(--primary-color);
+    font-family: var(--font-family);
+    color: var(--color);
+    font-weight: bold;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.social a {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: var(--border);
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.social a:hover {
+    background-color: var(--border);
+}
