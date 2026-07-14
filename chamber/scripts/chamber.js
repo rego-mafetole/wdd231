@@ -1,27 +1,19 @@
-const url = "data/members.json";
+// MENU
 
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
-const cards = document.querySelector("#cards");
+const display = document.querySelector("article");
 
-gridbutton.addEventListener("click", () => {
-    display.classList.add("grid");
-    display.classList.remove("list");
-});
+// ASYNC FUNCTION
 
-listbutton.addEventListener("click", () => {
-    display.classList.add("list");
-    display.classList.remove("grid");
-});
+const url = 'https://rego-mafetole.github.io/wdd231/chamber/data/members.json';
 
-// async function
-
-async function getCompanyNames(dataUrl) {
-    const response = await fetch(dataUrl);
+async function getMembersData(url) {
+    const response = await fetch(url);
     const data = await response.json();
 
     displayGrid(data.members);
-    setActiveButton(gridbutton);
+    setActiveButton(gridButton);
 
     gridButton.addEventListener("click", () => {
         displayGrid(data.members);
@@ -33,16 +25,14 @@ async function getCompanyNames(dataUrl) {
     });
 }
 
-getCompanyNames(url);
-
-// ACTIVE BUTTON
+getMembersData(url);
 
 function setActiveButton(activeButton) {
     [gridButton, listButton].forEach(btn => btn.classList.remove("active"));
     activeButton.classList.add("active");
 }
 
-// Function to display members in grid format
+// GRID FORMAT
 
 const displayGrid = (members) => {
     cards.innerHTML = "";
@@ -50,48 +40,46 @@ const displayGrid = (members) => {
     cards.classList.add("grid-view");
 
     members.forEach((member) => {
-        // Create elements to add to the div.cards element
+        // CREATE ELEMENTS TO ADD TO THE DIV ELEMENT
         let card = document.createElement("section");
         let name = document.createElement("h2");
+        let company = document.createElement("div");
         let image = document.createElement("img");
         let tagline = document.createElement("span");
         let email = document.createElement("p");
-        let phone = document.createElement("p");
+        let phone = document.creteElement("p");
         let website = document.createElement("p");
 
-        // Build the image by setting all the relevant attributes
+        // BUILD THE IMAGE BY SETTING ALL
         image.setAttribute("src", `images/${member.image}`);
-        image.setAttribute("alt", `${member.name}`);
+        image.setAttribute("alt" `${member.name}`);
         image.setAttribute("loading", "lazy");
         image.setAttribute("width", "50");
         image.setAttribute("height", "50");
 
-        // Build the tagline paragraph, placed beside the image
         tagline.classList.add("tagline");
         tagline.textContent = `${member.tagline}`;
-        top.classList.add("");
-        top.appendChild(image);
-        top.appendChild(tagline);
+        company.classList.add("company");
+        company.appendChild(image);
+        company.appendChild(tagline);
 
-        // Build the h2 content to show the business name
         name.textContent = `${member.name}`;
 
-        // Build the business info paragraphs, each on its own line
-        email.innerHTML = `<strong>EMAIL:</strong> ${member.email}`;
-        phone.innerHTML = `<strong>PHONE:</strong> ${member.phone}`;
-        website.innerHTML = `<strong>URL:</strong> ${member.website}`;
+        email.innerHTML = `<b>EMAIL:</b> ${member.email}`;
+        phone.innerHTML = `<b>PHONE:</b> ${member.phone}`;
+        website.innerHTML = `<b>URL:</b> ${member.website}`;
 
-        // Append the section(card) with the created elements
+        card.appendChild(company);
         card.appendChild(name);
         card.appendChild(email);
         card.appendChild(phone);
         card.appendChild(website);
 
         cards.appendChild(card);
-    });
+    })
 }
 
-// Function to display members in list format
+// LIST FORMAT
 
 const displayList = (members) => {
     cards.innerHTML = "";
@@ -99,17 +87,15 @@ const displayList = (members) => {
     cards.classList.add("list-view");
 
     members.forEach((member) => {
-        // Create elements to add to the div.cards element
+
         let card = document.createElement("section");
         let name = document.createElement("h2");
         let address = document.createElement("p");
         let phone = document.createElement("p");
         let website = document.createElement("p");
 
-        // Build the h2 content to show the business name
         name.textContent = `${member.name}`;
 
-        // Build the business info paragraphs, one per column
         address.classList.add("address");
         address.textContent = `${member.address}`;
         phone.classList.add("phone");
@@ -117,7 +103,6 @@ const displayList = (members) => {
         website.classList.add("website");
         website.textContent = `${member.website}`;
 
-        // Append the section(card) with the created elements
         card.appendChild(name);
         card.appendChild(address);
         card.appendChild(phone);

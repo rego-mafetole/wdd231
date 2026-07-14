@@ -108,8 +108,9 @@ h2 {
     align-items: center;
     text-align: center;
     background-color: var(--secondary-color);
+    border-radius: 8px;
     font-family: var(--body-font);
-    color: var(--text-color);
+    color: var(--color);
 }
 
 section p {
@@ -156,18 +157,26 @@ section span {
     column-gap: 10px;
     padding: 0.5rem;
     text-align: center;
-    background-color: var(--primary-color);
 }
 
 button {
-    padding: 0.5rem 2rem;
+    padding: 1rem 8rem;
     font-family: var(--body-font);
-    font-weight: bold;
+    font-weight: bolder;
     border-radius: 8px;
-    border: var(--text-color);
+    border: var(--color);
+    color: var(--color);
+    background-color: var(--secondary-color);
 }
 
-.grid
+button li.current {
+    text-decoration: underline;
+}
+
+button a:hover {
+    background-color: var(--border);
+    color: var(--primary-color);
+}
 
 /* ---- FOOTER ---- */
 
