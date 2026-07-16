@@ -98,6 +98,16 @@ header span {
     color: var(--primary-color);
 }
 
+/* ---- MENU ---- */
+
+.list img {
+    display: none;
+}
+
+.list span {
+    display: none;
+}
+
 /* ---- MAIN ----*/
 
 h1 {
