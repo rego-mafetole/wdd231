@@ -29,4 +29,12 @@
         border: none;
     }
 
+    .grid-button {
+        display: flex;
+        padding: 0.5rem 2rem;
+    }
+
+    section {
+        padding: 15px 15px;
+    }
 }
