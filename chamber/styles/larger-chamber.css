@@ -37,4 +37,17 @@
     section {
         padding: 15px 15px;
     }
+
+        .hero__image {
+            height: 420px;
+        }
+    
+        .hero__overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(0deg, rgba(11, 31, 58, 0.95) 30%, rgba(11, 31, 58, 0));
+            padding: 4.5rem 3rem 3rem;
+        }
 }

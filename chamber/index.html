@@ -10,9 +10,10 @@
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/smaller-chamber.css">
     <link rel="stylesheet" href="styles/larger-chamber.css">
-    <link rel="stylesheet" href="styles/normalize.css">
+
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,9 +60,113 @@
         <h1>City of Tshwane Chamber of Commerce</h1>
 
         <div class="info">
-        <section class="current-events"></section>
-        <section class="weather-card"></section>
-        <section class="member-spotlights"></section>
+        <section class="current-events">
+            <h1>Current Events</h1>
+            <article class="event-card">
+            <div class="events">
+                <p><b>Date:</b>27-31 July 2026</p>
+                <h2><b>Data Analyst Short Course</b></h2>
+                <p>A 5-Day professional corporate training program targeting corporate decision-making and data diagnostics.</p>
+            </div>
+            </article>
+
+            <article class="event-card">
+            <div class="events">
+                <p><b>Date:</b>29 July 2026</p>
+                <h2><b>Pretoria Business Network</b></h2>
+                <p>A morning business meetup hosted by the <b>Kyalami Business Network on Meetup</b> for localized relationship-bulding.</p>
+            </div>
+            </article>
+
+            <article class="event-card">
+            <div class="events">
+                <p><b>Date:</b>08 August 2026</p>
+                <h2><b>Your Signature Look Workshop</b></h2>
+                <p>A ticketed corporate styling, mental wellness,and personal branding executive session.</p>
+            </div>
+            </article>
+        </section>
+
+        <section class="weather-card">
+            <h1>Pretoria Weather</h1>
+            <div class="card">
+                <h2 id="town"></h2>
+                <img id="graphic" alt="">
+                <p id="description"></p>
+                <p id="temperature"></p>
+            </div>
+
+            <div class="weather">
+            <section class="forecast">
+                <div class="day-card">
+                    <h3 class="day-name">Day 1</h3>
+                    <img class="day-icon" src="" alt="">
+                    <p class="day-desc"></p>
+                    <p class="day-temp"></p>
+                </div>
+            </section>
+
+            <section class="forecast">
+                <div class="day-card">
+                    <h3 class="day-name">Day 2</h3>
+                    <img class="day-icon" src="" alt="">
+                    <p class="day-desc"></p>
+                    <p class="day-temp"></p>
+                </div>
+            </section>
+
+            <section class="forecast">
+                <div class="day-card">
+                    <h3 class="day-name">Day 3</h3>
+                    <img class="day-icon" src="" alt="">
+                    <p class="day-desc"></p>
+                    <p class="day-temp"></p>
+                </div>
+            </section>
+            </div>
+            </section>
+        </section>
+
+        <section class="member-spotlights"> 
+            <h1>Member Spotlights</h1>
+            <div class="spotlight-grid">
+            <article class="member-card">
+                <h3>Tshwane Automative Special Economic Zone</h3>
+                <img src="images/tasez.svg" alt="Logo of TASEZ" width="50" height="50" loading="lazy">
+                <p>141 Fusi Road, Unit 3, Silvertondale</p>
+                <p>011 492 2314</p>
+                <a href="https://css.co.za">Visit Website</a>
+                <p>Silver Member</p>
+            </article>
+
+            <article class="member-card">
+                <h3>Mzansi Youth Link</h3>
+                <img src="images/mzanzi-link.svg" alt="Logo of Mzanzi Youth Link" width="50" height="50" loading="lazy">
+                <p>115 Paul Kruger St, Tshwane, Pretoria, Gauteng, 0002</p>
+                <p>065 821 9107</p>
+                <a href="www.mzanziyouthlink.co.za">Visit Website</a>
+                <p>Gold Member</p>
+            </article>
+
+            <article class="member-card">
+                <h3>Forti Foods</h3>
+                <img src="images/fortifood.svg" alt="Logo of forti foods" width="50" height="50" loading="lazy">
+                <p>11 Boschkop Road, Tshwane, Pretoria, Gauteng, 0036</p>
+                <p>012 811 0432</p>
+                <a href="https://fortifood.co.za">Visit Website</a>
+                <p>Silver Member</p>
+            </article>
+
+            <article class="member-card">
+                <h3>NuSkinnovation</h3>
+                <img src="images/nuskinnovation.svg" alt="Logo of NuSkinnovation" width="50" height="50" loading="lazy">
+                <p>344 Francis Baard St, Tshwane, Pretoria, Gauteng, 0082</p>
+                <p>072 581 8124</p>
+                <a href="https://www.nuskinnovation.co.za">Visit Website</a>
+                <p>Gold Member</p>
+            </article>
+            </div>
+        </section>
         </div>
     </main>
 
