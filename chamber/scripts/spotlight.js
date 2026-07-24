@@ -1,71 +1,57 @@
-const spotlightGrid = document.querySelector("#spotlight-grid");
+const spotlightContainer = document.querySelector("#member-card");
+const membersUrl = "data/members.json";
 
-const TIER_LABELS = {
-    3: { label: "Gold Member", className: "badge--gold" },
-    2: { label: "Silver Member", className: "badge--silver" },
-};
+async function getSpotlights() {
+    const response = await fetch(membersUrl);
+    const data = await response.json();
 
-async function loadSpotlights() {
-    spotlightsGrid.innerHTML = `<p class="state-message">Loading spotlights…</p>`;
+    const qualifiedMembers = data.members.filter((member) =>
+        member.membership === 2 || member.membershipLevel === 3
+    );
 
-    try {
-        const response = await fetch("data/members.json");
+    const randomMembers = qualifiedMembers
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3);
 
-        if (!response.ok) {
-            throw new Error(`Network response was not ok (status ${response.status})`);
-        }
-
-        const data = await response.json();
-        const eligible = data.members.filter((member) => member.membershipLevel >= 2);
-        const chosen = pickRandom(eligible, 3);
-
-        renderSpotlights(chosen);
-    } catch (error) {
-        spotlightsGrid.innerHTML = `<p class="state-message">Spotlights could not be loaded right now.</p>`;
-        console.error("Failed to load spotlights:", error);
-    }
+    displaySpotlights(randomMembers);
 }
 
-function pickRandom(array, count) {
-    const copy = [...array];
+getSpotlights();
 
-    for (let i = copy.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [copy[i], copy[j]] = [copy[j], copy[i]];
-    }
+function displaySpotlights(members) {
+    if (spotlightContainer) {
+        spotlightContainer.innerHTML = "";
 
-    return copy.slice(0, count);
-}
+        members.forEach((member) => {
+            const card = document.createElement("section");
+            card.classList.add("spotlight-grid");
 
-function renderSpotlights(members) {
-    spotlightsGrid.innerHTML = "";
+            const membershipLevel =
+                member.membershipLevel === 3 ? "Gold Member" : "Silver Member";
 
-    members.forEach((member) => {
-        const tier = TIER_LABELS[member.membershipLevel];
-
-        const card = document.createElement("article");
-        card.className = "member-card";
-
-        card.innerHTML = `
-      <img class="member-card__logo" src="${member.imageFileName}" alt="${member.name} logo" width="50" height="50" loading="lazy">
-      <div class="member-card__body">
-        <div class="member-card__top">
-          <div>
+            card.innerHTML = `
             <h3>${member.name}</h3>
-            <p class="member-card__category">${member.category}</p>
-          </div>
-          <span class="badge ${tier.className}">${tier.label}</span>
-        </div>
-        <div class="member-card__meta">
-          <span>${member.address}</span>
-          <span>${member.phoneNumber}</span>
-          <a href="${member.websiteUrl}" target="_blank" rel="noopener">${member.websiteUrl.replace(/^https?:\/\//, "")}</a>
-        </div>
-      </div>
-    `;
 
-        spotlightsGrid.appendChild(card);
-    });
+            <img
+                src="images/${member.imageFileName}"
+                alt="${member.companyName} logo"
+                width="50"
+                height="50"
+                loading="lazy"
+            >
+
+            <p>${member.address}</p>
+            <p>${member.phoneNumber}</p>
+
+            <a href="${member.websiteUrl}" target="_blank">
+                Visit Website
+            </a>
+
+            <p>${membershipLevel}</p>
+        `;
+
+            spotlightContainer.appendChild(card);
+        
+        });
+    }
 }
-
-loadSpotlights();

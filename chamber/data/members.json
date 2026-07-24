@@ -7,8 +7,8 @@
             "phoneNumber": "011 492 2314",
             "email": "enquiries@tasez.co.za",
             "websiteUrl": "https://css.co.za",
-            "imageFileName": "image/tasez.svg",
-            "membershipLevel":"2-Silver"
+            "imageFileName": "tasez.svg",
+            "membershipLevel": 2
         },
         
         {
@@ -18,8 +18,8 @@
             "phoneNumber": "082 285 4426",
             "email": "sales@everestmh.co.za",
             "websiteUrl": "www.everestmh.co.za",
-            "imageFileName":"image/everest.svg",
-            "membershipLevel": "1-Member"
+            "imageFileName":"everest.svg",
+            "membershipLevel": 1
         },
 
         {
@@ -29,8 +29,8 @@
             "phoneNumber": "012 327 5234",
             "email": "info@dzundeas.co.za",
             "websiteUrl": "dzundesas.co.za",
-            "imageFileName": "image/dzunde.svg",
-            "membershipLevel": "1-Member"
+            "imageFileName": "dzunde.svg",
+            "membershipLevel": 1
         },
 
         {
@@ -40,8 +40,8 @@
             "phoneNumber": "065 821 9107",
             "email": "admin@careers.mzansiyouthlink.co.za",
             "websiteUrl": "www.mzanziyouthlink.co.za",
-            "imageFileName": "image/mzanzi-link.svg",
-            "membershipLevel": "3-Gold"
+            "imageFileName": "mzanzi-link.svg",
+            "membershipLevel": 3
         },
 
         {
@@ -51,8 +51,8 @@
             "phoneNumber": "062 422 6998",
             "email": "info@plumber-pretoria.co.za",
             "websiteUrl": "https://pretoriaplumbingservice.co.za",
-            "imageFileName": "image/pta-plumbing.svg",
-            "membershipLevel": "1-Member"
+            "imageFileName": "pta-plumbing.svg",
+            "membershipLevel": 1
         },
 
         {
@@ -62,8 +62,8 @@
             "phoneNumber": "012 811 0432",
             "email": "info@fortifood.co.za",
             "websiteUrl": "https://fortifood.co.za",
-            "imageFileName": "image/fortifood",
-            "membershipLevel": "2-Silver"
+            "imageFileName": "fortifood.svg",
+            "membershipLevel": 2
         },
 
         {
@@ -73,8 +73,8 @@
             "phoneNumber": "072 581 8124",
             "email": "reception.east@nuskinnovation.co.za",
             "websiteUrl": "https://www.nuskinnovation.co.za",
-            "imageFileName": "image/nuskinnovation",
-            "membershipLevel": "3-Gold"
+            "imageFileName": "nuskinnovation.svg",
+            "membershipLevel": 3
         },
 
         {
@@ -84,8 +84,8 @@
             "phoneNumber": "081 418 9789",
             "email": "info@linebeauty.co.za",
             "websiteUrl": "www.finelinebeauty.co.za",
-            "imageFileName": "image/file-line",
-            "membershipLevel": "3-Gold"
+            "imageFileName": "file-line.svg",
+            "membershipLevel": 3
         }
     ]
 }
