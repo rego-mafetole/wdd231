@@ -26,7 +26,6 @@ async function loadSpotlights() {
     }
 }
 
-// Fisher-Yates shuffle, then returns up to `count` items from the array.
 function pickRandom(array, count) {
     const copy = [...array];
 
@@ -48,7 +47,7 @@ function renderSpotlights(members) {
         card.className = "member-card";
 
         card.innerHTML = `
-      <img class="member-card__logo" src="${member.image}" alt="${member.name} logo" width="50" height="50" loading="lazy">
+      <img class="member-card__logo" src="${member.imageFileName}" alt="${member.name} logo" width="50" height="50" loading="lazy">
       <div class="member-card__body">
         <div class="member-card__top">
           <div>
@@ -59,8 +58,8 @@ function renderSpotlights(members) {
         </div>
         <div class="member-card__meta">
           <span>${member.address}</span>
-          <span>${member.phone}</span>
-          <a href="${member.website}" target="_blank" rel="noopener">${member.website.replace(/^https?:\/\//, "")}</a>
+          <span>${member.phoneNumber}</span>
+          <a href="${member.websiteUrl}" target="_blank" rel="noopener">${member.websiteUrl.replace(/^https?:\/\//, "")}</a>
         </div>
       </div>
     `;
