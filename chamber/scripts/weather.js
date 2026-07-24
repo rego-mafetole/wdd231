@@ -6,6 +6,7 @@ const myGraphic = document.querySelector('#graphic');
 const myForecast = document.querySelector('.forecast');
 const dayCards = document.querySelectorAll('.day-card')
 
+
 // CREATE REQUIRED VARIABLES FOR THE URL
 const myKey = "39f9082eab16f45ab47967b1ffdc201e"
 const myLat = "-25.761124"
