@@ -12,7 +12,7 @@ const myLat = "-25.761124"
 const myLong = "28.219923"
 
 // CONSTRUCT A FULL PATH USING TEMPLATE LITERALS
-const myURL = `//api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=metric`;
+const myURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=metric`;
 
 
 // TRY TO GRAB THE CURRENT WEATHER DATA
