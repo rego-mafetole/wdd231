@@ -199,6 +199,12 @@ picture img {
     display: grid;
 }
 
+.info h2 {
+    color: var(--text-color);
+    background-color: var(--color);
+    text-align: start;
+}
+
 .current-events {
     display: grid;
     grid-template-columns: 1fr;
@@ -236,8 +242,11 @@ picture img {
     text-align: center;
 }
 
-.card h2 {
+.card h3 {
     background-color: var(--secondary-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-family: var(--font-family);
     color: var(--color);
     margin: .3rem 0;
 }
@@ -290,10 +299,6 @@ picture img {
     gap: 1.75rem;
 }
 
-.member-spotlights h1 {
-    margin-bottom: 1rem;
-}
-
 .member-card {
     border: 1px solid var(--border);
     border-radius: 10px;
@@ -305,7 +310,7 @@ picture img {
     text-align: center;
 }
 
-.member-card h2 {
+.member-card h3 {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
