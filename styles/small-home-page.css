@@ -150,6 +150,28 @@ h2 {
     color: var(--secondary-color);
 }
 
+dialog {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: .25rem;
+    box-shadow: 0 0 10px #777;
+    padding: 1rem;
+}
+
+::backdrop {
+    background-color: rgb(0 0 0 / 50%);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+}
+
 /* ---- WEB BUTTONS ---- */
 
 .course-count {
