@@ -28,7 +28,7 @@ body {
 header,
 footer {
     text-align: center;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     padding: 1.5rem;
 }
 
