@@ -135,7 +135,7 @@ function displayCourses(filteredCourses) {
             card.classList.add("completed-course");
         }
 
-        courseDiv.addEventListener('click', () => {
+        card.addEventListener('click', () => {
             displayCourseDetails(course);
         });
     });

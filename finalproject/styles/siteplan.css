@@ -1,0 +1,129 @@
+:root {
+    --body-font: 'Roboto', sans-serif;
+    --secondary-color: #045986; /*Header, footer, and section divider*/
+    --primary-color: #31444e; /* hover, borders and image overlays*/
+    --background-color: #F5F2EB;  /*Main page body */
+    --accent-color: #005A87; /*Buttons*/
+    --border: 1px solid #ccc;
+    --color: #ffffff;
+    --text-color: black;
+    --font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*Logo name*/
+    --font-family2: Verdana, Geneva, Tahoma, sans-serif;
+    --font-family3: 'Times New Roman', Times, serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family2);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header,
+footer {
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+}
+
+header h1 {
+    font-family: var(--font-family);
+    margin: 0;
+    color: var(--color);
+}
+
+.logo-name {
+    font-family: var(--font-family);
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    color: var(--color);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    background-color: #ffffff;
+    margin: 1rem 0;
+    padding: 1.25rem;
+    border-left: 8px solid var(--secondary-color);
+    border-radius: 8px;
+}
+
+h2,
+h3 {
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+.color {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.deep-blue {
+    background-color: var(--primary-color);
+    color: var(--color);
+}
+
+.white {
+    background-color: var(--color);
+    color: var(--text-color);
+}
+
+.dark-blue {
+    background-color: var(--secondary-color);
+    color: var(--color);
+}
+
+.soft-warm-cream {
+    background-color: var(--background-color);
+}
+
+.black {
+    background-color: var(--text-color);
+    color: var(--color);
+}
+
+.modern-blue {
+    background-color: var(--accent-color);
+    color: var(--color);
+}
+
+.light-grey {
+    background-color: #ccc;
+}
+
+.wireframe {
+    border: 2px dashed var(--secondary-color);
+    padding: 1rem;
+    background-color: var(--background-color);
+}
+
+.wireframe p {
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: var(--color);
+    text-align: center;
+    border-radius: 4px;
+}
+
+footer p {
+    margin: 0;
+}
