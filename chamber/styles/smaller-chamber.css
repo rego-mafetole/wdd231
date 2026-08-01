@@ -374,12 +374,11 @@ form {
         display: block;
         font-size: .8rem;
         color: var(--text-color);
-        font-size: medium;
         font-family: var(--body-font);
         padding-top: .2rem;
     }
 
-    h2 {
+    form h2 {
         color: var(--text-color);
         text-align: start;
     }
