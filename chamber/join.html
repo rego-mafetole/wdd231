@@ -14,6 +14,7 @@
     
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +46,120 @@
     </nav>
     <main>
 
+        <h1>Join</h1>
+
+        <form method="get" action="thanks.html" class="designOne">
+            <fieldset>
+            <legend>Personal Information</legend>
+            <label>First Name: <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+            <label>Last Name: <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+            <label>Organizational Title: <input type="text" name="organization" required autocomplete="organization-title" title="Organizational Title"></label>
+            <label>Cell Phone: <input type="tel" name="phone" autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234"></label>
+            <label>Email: <input type="email" name="email" required placeholder="john89@gmail.com" title="Your Email" autocomplete="email"></label>
+            </fieldset>
+
+            <fieldset>
+            <legend>Membership Level</legend>
+            <label><input type="radio" name="membership" value="gold-membership" checked> Gold Membership </label>
+            <label><input type="radio" name="membership" value="silver-membership"> Silver Membership </label>
+            <label><input type="radio" name="membership" value="bronze-membership"> Bronze Membership </label>
+            <label><input type="radio" name="membership" value="non-profit"> No fee Membership for non profit organization</label>
+            </fieldset>
+
+            <fieldset>
+            <legend>Organization Information</legend>
+            <label>Organizational Name: <input type="text" name="org-name" required autocomplete="organization-name" title="Organizational Title"></label>
+            <label>Business/Organization's Description: <textarea name="Description" title="Description of Your Business/Organization's"></textarea></label>
+            </fieldset>
+
+            <input type="submit" value="Join the Chamber">
+        </form>
+        
+            <section class="card-container">
+                <div class="card" id="gold-card">
+                    <h2>Gold Membership</h2>
+                    <button id="open-gold" class="open-btn">Learn More</button>
+                </div>
+            
+                <dialog id="modal-gold" class="member-modal">
+                    <h2>Gold Membership Benefits</h2>
+                    <p><strong>Cost:</strong> R3000 / year</p>
+                    <p><strong>Description:</strong> Our premier tier for established corporate leaders looking to
+                        maximize
+                        community impact and brand positioning.</p>
+                    <p><strong>Perks:</strong></p>
+                    <ul>
+                        <li>Featured directory listing at the top of relevant categories.</li>
+                        <li>Free admission for up to 4 guests at all chamber networking events.</li>
+                        <li>Homepage spotlight feature (rotating spot on the chamber home page).</li>
+                        <li>VIP invitation to annual executive summits and sponsorship priority.</li>
+                    </ul>
+                    <button id="close-gold" class="close-btn">×</button>
+                </dialog>
+            
+                <div class="card" id="silver-card">
+                    <h2>Silver Membership</h2>
+                    <button id="open-silver" class="open-btn">Learn More</button>
+                </div>
+            
+                <dialog id="modal-silver" class="member-modal">
+                    <h2>Silver Membership Benefits</h2>
+                    <p><strong>Cost:</strong> R2000/Year</p>
+                    <p><strong>Description:</strong> Tailored for growing businesses seeking greater visibility and
+                        targeted
+                        marketing benefits.</p>
+                    <p><b>Perks:</b></p>
+                    <ul>
+                        <li>25% discount on all event tickets and training sessions.</li>
+                        <li>One social media spotlight per year on chamber channels.</li>
+                        <li>Homepage spotlight feature (rotating spot on the chamber home page).</li>
+                        <li>Choice of 1 advertising banner slot in the monthly newsletter.</li>
+                    </ul>
+                    <button id="close-silver" class="close-btn">×</button>
+                </dialog>
+            
+                <div class="card" id="bronze-card">
+                    <h2>Bronze Membership</h2>
+                    <button id="open-bronze" class="open-btn">Learn More</button>
+                </div>
+            
+                <dialog id="modal-bronze" class="member-modal">
+                    <h2>Bronze Membership Benefits</h2>
+                    <p><b>Cost:</b> R1000 /Year</p>
+                    <p><strong>Description:</strong> Perfect for small business owners and startups looking for
+                        essential
+                        exposure and networking opportunities.</p>
+                    <p><strong>Perks:</strong></p>
+                    <ul>
+                        <li>Standard business directory listing.</li>
+                        <li>10% discount on all chamber-sponsored training events.</li>
+                        <li>Access to monthly networking breakfasts.</li>
+                        <li>Ribbon-cutting ceremony assistance.</li>
+                    </ul>
+                    <button id="close-bronze" class="close-btn">×</button>
+                </dialog>
+            
+                <div class="card" id="np-card">
+                    <h2>Non Profit Membership</h2>
+                    <button id="open-np" class="open-btn">Learn More</button>
+                </div>
+            
+                <dialog id="modal-np" class="member-modal">
+                    <h2>Non Profit Membership</h2>
+                    <p><strong>Cost:</strong> Free</p>
+                    <p><b>Description:</b> Designed specifically for 501(c)(3) organizations looking to 
+                        connect with the local community.</p>
+                    <p><strong>Perks:</strong></p>
+                    <ul>
+                        <li>Basic directory listing on the chamber website.</li>
+                        <li>Access to community networking events and luncheons.</li>
+                        <li>Invitation to annual non-profit workshops.</li>
+                    </ul>
+                    <button id="close-np" class="close-btn">×</button>
+                </dialog>
+
+                <input type="hidden" id="timeStamp" name="timeStamp">
+            </section>
     </main>
 
     <footer>
