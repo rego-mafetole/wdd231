@@ -368,6 +368,7 @@ button a:hover {
 form {
 
     margin: 1rem 2%;
+}
 
     label {
         display: block;
@@ -470,7 +471,7 @@ form {
         margin: 0 0 0 1rem;
         font-size: 1.5rem;
     }
-}
+
 
 input:-webkit-autofill {
     -webkit-text-fill-color: #3D405B;
