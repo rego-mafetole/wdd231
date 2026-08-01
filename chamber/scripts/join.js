@@ -1,5 +1,5 @@
 const formLoadedTime = new Date();
-const timeStamp = document.querySelector("#timeStamp");
+const timeStamp = document.querySelector("#timestamp");
 const openNp = document.querySelector("#open-np");
 const modalNp = document.querySelector("#modal-np");
 const closeNp = document.querySelector("#close-np");
@@ -14,8 +14,8 @@ const modalGold = document.querySelector("#modal-gold");
 const closeGold = document.querySelector("#close-gold");
 
 // Automatically set the hidden form timestamp field
-if (timeStamp) {
-    timeStamp.value = formLoadedTime.toLocaleString();
+if (timestamp) {
+    timestamp.value = formLoadedTime.toLocaleString();
 }
 
 if (openNp && modalNp) {
