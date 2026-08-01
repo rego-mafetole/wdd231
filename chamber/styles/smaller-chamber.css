@@ -127,10 +127,13 @@ h2 {
     border-radius: 8px;
     font-family: var(--body-font);
     color: var(--color);
+    padding: 5px;
+    margin: 5px 0;
 }
 
 section p {
     font-family: var(--body-font);
+    margin: 5px 0;
 }
 
 section {
@@ -237,6 +240,7 @@ picture img {
     background-color: var(--background-color);
     color: var(--color);
     border-radius: 10px;
+    padding: 6px 12px;
     text-align: center;
 }
 
