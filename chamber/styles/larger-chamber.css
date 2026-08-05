@@ -1,13 +1,84 @@
 @media only screen and (min-width: 64rem){
+    header,
+        main,
+        nav,
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        header {
+            grid-template-columns: 24px auto;
+        }
+    
+        .hamburger {
+            display: none;
+        }
+    
+        .navigation {
+            display: block;
+            border-bottom: solid 1px #eee;
+        }
+    
+        .navigation ul {
+            display: flex;
+        }
+    
+        .navigation a {
+            border: none;
+        }
+    
+        .grid-button {
+            display: flex;
+            padding: 0.5rem 2rem;
+        }
+    
+        section {
+            padding: 15px 15px;
+        }
+    
+        .hero__image {
+            height: 420px;
+        }
+    
+        .hero__overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(0deg, rgba(11, 31, 58, 0.95) 30%, rgba(11, 31, 58, 0));
+            padding: 4.5rem 3rem 3rem;
+        }
 
-    #cards-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
+        .message {
+        display: block;
+        }
 
-    #cards-container h1 {
-        grid-column: 1 / -1;
-        margin-bottom: 10px;
-    }
+        #cards-container section {
+            grid-template-areas:
+                "image name"
+                "image description"
+                "image address";
+        }
+
+        #cards-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 8px 8px;
+            font-family: var(--body-font);
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: var(--background-color) 0.2s ease;
+        }
+
+        #cards-container img {
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        #cards-container img:hover {
+            transform: scale(1.05s);
+            filter: brightness(1.1);
+        }
 }

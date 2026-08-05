@@ -701,10 +701,10 @@ li {
 
 #cards-container {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
-    padding: 20px;
+    
     margin: 0 auto;
-    max-width: 1200px;
 }
 
 #cards-container section {
@@ -715,7 +715,7 @@ grid-template-areas:
 "address";
 }
 
-.card {
+.cards {
     display: grid;
     border: var(--border);
     border-radius: 8px;
@@ -725,7 +725,7 @@ grid-template-areas:
     gap: 12px;
 }
 
-.card h2 {
+.cards h2 {
     grid-area: name;
     margin: 0;
     background-color: var(--background-color);
@@ -733,12 +733,12 @@ grid-template-areas:
     color: var(--text-color);
 }
 
-.card figure {
+.cards figure {
     margin: 0;
     padding: 0;
 }
 
-.card img {
+.cards img {
     grid-area: image;
     display: block;
     width: 100%;
@@ -747,31 +747,40 @@ grid-template-areas:
     object-fit: cover;
 }
 
-.card address {
+.cards address {
     grid-area: address;
     font-family: var(--body-font);
     font-weight: 500;
     color: var(--text-color);
 }
 
-.card p {
+.cards p {
     grid-area: description;
     margin: 0;
     color: #444;
 }
 
-.card button {
-    padding: 8px 16px;
+.cards button {
+    padding: 8px 10px;
     font-family: var(--body-font);
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-    transition: var(--background-color) 0.2s ease;
 }
 
-.card button:hover {
+/* .cards button:hover {
     background-color: var(--background-color);
     color: var(--secondary-color);
+} */
+
+.message {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-height: 38px;
+    color: var(--text-color);
+    margin: 1rem 0;
 }
 
 

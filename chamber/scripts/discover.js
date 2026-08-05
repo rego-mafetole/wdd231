@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     gridContainer.innerHTML = '';
 
-    const heading = document.createElement('h1');
-    heading.textContent = "Discover";
-    heading.classList.add('page-title');
+    // const heading = document.createElement('h1');
+    // heading.textContent = "Discover";
+    // heading.classList.add('page-title');
 
-    gridContainer.appendChild(heading);
+    // gridContainer.appendChild(heading);
 
     itemsOfInterest.forEach((item) => {
         const cardElement = document.createElement('section');
-        cardElement.classList.add('card');
+        cardElement.classList.add('cards');
 
         const cardTitle = document.createElement('h2');
         cardTitle.textContent = item.name;
