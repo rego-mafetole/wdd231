@@ -1,53 +1,13 @@
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 64rem){
 
-    header,
-    main,
-    nav,
-    footer {
-        max-width: 1200px;
-        margin: 0 auto;
+    #cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
-    header {
-        grid-template-columns: 24px auto;
+    #cards-container h1 {
+        grid-column: 1 / -1;
+        margin-bottom: 10px;
     }
-
-    .hamburger {
-        display: none;
-    }
-
-    .navigation {
-        display: block;
-        border-bottom: solid 1px #eee;
-    }
-
-    .navigation ul {
-        display: flex;
-    }
-
-    .navigation a {
-        border: none;
-    }
-
-    .grid-button {
-        display: flex;
-        padding: 0.5rem 2rem;
-    }
-
-    section {
-        padding: 15px 15px;
-    }
-
-        .hero__image {
-            height: 420px;
-        }
-    
-        .hero__overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(0deg, rgba(11, 31, 58, 0.95) 30%, rgba(11, 31, 58, 0));
-            padding: 4.5rem 3rem 3rem;
-        }
 }

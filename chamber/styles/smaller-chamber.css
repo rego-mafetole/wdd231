@@ -697,6 +697,83 @@ li {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* ---- DISCOVER ---- */
+
+#cards-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#cards-container section {
+grid-template-areas: 
+"name"
+"image"
+"description"
+"address";
+}
+
+.card {
+    display: grid;
+    border: var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    gap: 12px;
+}
+
+.card h2 {
+    grid-area: name;
+    margin: 0;
+    background-color: var(--background-color);
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.card figure {
+    margin: 0;
+    padding: 0;
+}
+
+.card img {
+    grid-area: image;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.card address {
+    grid-area: address;
+    font-family: var(--body-font);
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.card p {
+    grid-area: description;
+    margin: 0;
+    color: #444;
+}
+
+.card button {
+    padding: 8px 16px;
+    font-family: var(--body-font);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--background-color) 0.2s ease;
+}
+
+.card button:hover {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
 
 /* ---- FOOTER ---- */
 
