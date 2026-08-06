@@ -61,6 +61,18 @@
                 "image address";
         }
 
+        #cards-container section h2 {
+            grid-area: image name;
+        }
+
+        #cards-container section img {
+            grid-area: image address;
+        }
+
+        #cards-container section p {
+            grid-area: image description;
+        }
+
         #cards-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
