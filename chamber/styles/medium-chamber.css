@@ -6,9 +6,9 @@
 
     #cards-container section {
         grid-template-areas:
-            "image name"
-            "image description"
-            "image address";
+            "image-name"
+            "image-description"
+            "image-address";
     }
 
     #cards-container button {
@@ -23,21 +23,21 @@
     }
 
     #cards-container h2 {
-        grid-area: image name;
+        grid-area: image-name;
         align-items: center;
         margin: 40px auto;
         width: 100%;
     }
 
     #cards-container section img {
-        grid-area: image address;
+        grid-area: image-address;
         display: grid;
         grid-template-columns: 1fr 1fr;
         width: 300px;
     }
 
     #cards-container section p {
-        grid-area: image description;
+        grid-area: image-description;
     }
 
         #cards-container img {

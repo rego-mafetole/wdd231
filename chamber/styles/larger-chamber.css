@@ -56,21 +56,21 @@
 
         #cards-container section {
             grid-template-areas:
-                "image name"
-                "image description"
-                "image address";
+                "image-name"
+                "image-description"
+                "image-address";
         }
 
         #cards-container section h2 {
-            grid-area: image name;
+            grid-area: image-name;
         }
 
         #cards-container section img {
-            grid-area: image address;
+            grid-area: image-address;
         }
 
         #cards-container section p {
-            grid-area: image description;
+            grid-area: image-description;
         }
 
         #cards-container {
