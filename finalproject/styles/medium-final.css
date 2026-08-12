@@ -1,0 +1,73 @@
+@media only screen and (min-width: 38rem) {
+
+    header,
+    main,
+    nav,
+    footer {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header {
+        grid-template-columns: 24px auto;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+        border-bottom: solid 1px #eee;
+    }
+
+    .navigation ul {
+        display: flex;
+    }
+
+    .navigation a {
+        border: none;
+    }
+
+    .about {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-family: var(--font-family2);
+    gap: 3rem;
+    margin: 2rem;
+    background-color: var(--background-color);
+    padding: 1.25rem;
+    border: var(--border);
+    border-radius: 8px;
+    text-align: center;
+    font-family: var(--font-family);
+    animation-name: appear;
+    animation: appear 1s ease-out backwards;
+    }
+
+    section {
+        padding: 15px 15px;
+    }
+
+    .hero picture img {
+        display: block;
+        width: 100%;
+        max-height: 450px;
+        height: auto;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .hero__overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(0deg, rgba(11, 31, 58, 0.95) 30%, rgba(11, 31, 58, 0));
+        padding: 4.5rem 3rem 3rem;
+    }
+
+    .message {
+        display: block;
+    }
+}

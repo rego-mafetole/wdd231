@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strive2Learn Home</title>
+    <meta name="description" content="WDD 231 | Regomoditswe Elizabeth Mafetole final project home page. This page is the home page of stive2learn website. ">
+    <meta name="author" content="Regomoditswe Elizabeth Mafetole">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/smaller-final.css">
+    <link rel="stylesheet" href="styles/medium-final.css">
+    <link rel="stylesheet" href="styles/larger-final.css">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/visit.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Strive 2 Learn Landing Page.">
+    <meta property="og:description" content="Strive 2 Learn website. This website will provide personalised academic instruction and learning support tailored for individual learners needs.">
+    <meta property="og:image" content="https://rego-mafetole.github.io/wdd231/finalproject/images/s2l-logo.svg">
+    <meta property="og:url" content="https://rego-mafetole.github.io/wdd231/finalproject/index.html">
+</head>
+
+<body>
+    
+    <header>
+        <img src="images/s2l-logo.svg" alt="Site Logo" loading="lazy">
+        <span>Strive2Learn</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </header>
+    
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <div id="visitor-message" class="message"></div>
+
+        <h1 >Strive2Learn</h1>
+
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 500px)" srcset="images/smaller-hero-student.webp">
+                <source media="(max-width: 1000px)" srcset="images/medium-hero-student.webp">
+                <img src="images/larger-hero-student.webp" alt="Hero image Strive2Learn" loading="lazy">
+            </picture>
+
+            <p class="hero-p">
+                Helping children build confidence, close learning gaps and unlock 
+                <span>their full potential </span>
+            </p>
+
+            <a href="directory.html">
+                <div class="call-to-action">
+                    <h2>FIND OUT MORE</h2>
+                </div>
+            </a>
+        </div>
+
+        <section class="about">
+            <div>
+                <h2>We empower young learners</h2>
+                <p>At Strive2Learn, we work closely with schools and parents to support children
+                    who benefit from learning at a pace that suits them, whether they need more time
+                    to go over key concepts or a greater challenge to extend their thinking.
+                </p>
+                <p>
+                    In small, focused groups, we help them build confidence and strengthen their skills
+                    in math, reading, and writing so they can make strong, sustained progress in school
+                    and beyond.  
+                </p>
+            </div>
+            <img src="images/tutor1.webp" alt="Image of a tutor helping a learner" width="250px" height="200px" loading="lazy">
+        </section>
+
+        <h2 class="come">People come to us when...</h2>
+
+        <div class="pros">
+            <p>Grades have slipped & confidence has gone with them.</p>
+        </div>
+        <div class="pros">
+            <p>Test prep feels overwhelming or poorly timed.</p>
+        </div>
+        <div class="pros">
+            <p>A good student isn't performing to their potential.</p>
+        </div>
+        <div class="pros">
+            <p>Parents are tired of managing schedules and follow-ups.</p>
+        </div>
+
+        <div class="card" id="tutoring-card">
+            <h2>Strive2Learn Tutoring is a great fit if: </h2>
+            <button id="open-tutoring" class="open-btn">Learn More</button>
+        </div>
+
+        <dialog id="modal-tutoring" class="modal">
+            <h2>Perks:</h2>
+            <ul>
+                <li><b>✓ </b>Your child needs personalized attention and/or a small group setting</li>
+                <li><b>✓ </b>You value long term, consistent support over last minute cram sessions</li>
+                <li><b>✓ </b>You want a long-term academic partner who can adapt to learning styles,anxiety, and confidence issues</li>
+                <li><b>✓ </b>You want clear communication and a professional, organized process</li>
+                <li><b>✓ </b>You're looking for the cheapest option available</li>
+            </ul>
+            <button id="close-tutoring" class="close-btn">×</button>
+        </dialog>
+
+    </main>
+
+    <footer>
+        <p><b>Strive2Learn</b></p>
+        <p>456 Government Street</p>
+        <p>Pretoria, 0002, South Africa</p>
+    
+        <div class="social">
+            <a href="https://github.com/rego-mafetole" target="_blank"><img src="images/github.svg" alt="github" width="16"
+                    height="16"></a>
+            <a href="https://www.linkedin.com/in/regomoditswe-mafetole-578432367" target="_blank"><img
+                    src="images/linkedin.svg" alt="linked in" width="16" height="16"></a>
+            <a href="https://facebook.com/rego.mafetole" target="_blank"><img src="images/facebook.svg" alt="facebook"
+                    width="16" height="16"></a>
+            <a href="https://www.instagram.com/_rego.moditswe?igsh=MTQ4b2JIYzF4d3YxNA%3D%25&u" target="_blank"><img
+                    src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
+        </div>
+    
+        <p>WDD231 Class Final Project</p>
+        <p>Regomoditswe Elizabeth Mafetole</p>
+        <p>&copy; <span id="current-year"></span> Strive2Learn</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</h
